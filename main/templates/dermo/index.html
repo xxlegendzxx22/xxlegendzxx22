@@ -1,0 +1,20 @@
+{% extends 'dermo/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 class="display-4">Сайт</h1>
+{% if tasks%}
+<p class="lead justify"><div align="justify">
+  {% for el in tasks %}
+    <div class="alert alert-warning mt-2">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.task}}</p>
+    </div>
+  {% endfor %}
+    {% else %}
+    <p>У нас нет записей </p>
+    {%endif%}
+{% endblock %}

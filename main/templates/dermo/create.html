@@ -1,0 +1,16 @@
+{% extends 'dermo/base.html' %}
+
+{% block title %}
+Создать Task
+{% endblock %}
+
+{% block content %}
+  <h1 class="display-5">Создать Task</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.title }}<br>
+      {{ form.task }}<br>
+      <button type="submit" class="btn-success">Добавить</button>
+      <span>{{error}}</span>
+    </form>
+{% endblock %}
