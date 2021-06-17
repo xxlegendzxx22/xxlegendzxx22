@@ -1,1 +1,1 @@
-"# xxlegendzxx22" 
+python manage.py runserver
